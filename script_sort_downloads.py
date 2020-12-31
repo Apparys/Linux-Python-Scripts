@@ -4,17 +4,17 @@ from glob import glob
 #<------------------------------------------------------------------------------------------------->
 
 
-d_path = '/home/hector/Téléchargements/'
+d_path = '/home/{user}/Downloads/'
 remove = ("[", "]", "'")
-#Intructions for glob, folders where to put the files
+#Intructions for glob, folders where to put the files. It's an example
 tri = {
-      '*.pdf':'/home/hector/Documents',
-       '*.txt':'/home/hector/Documents',
-       '*.py':'/home/hector/Python',
-       '*.jpg':'/home/hector/Images',
-       '*.png':'/home/hector/Images',
-       '*.odt':'/home/hector/Documents',
-       '*.csv':'/home/hector/Python/csv',
+      '*.pdf':'/home/{user}/Documents',
+       '*.txt':'/home/{user}/Documents',
+       '*.py':'/home/{user}/Python',
+       '*.jpg':'/home/{user}/Images',
+       '*.png':'/home/{user}/Images',
+       '*.odt':'/home/{user}/Documents',
+       '*.csv':'/home/{user}/Python/csv',
        }
 #<------------------------------------------------------------------------------------------------->
 
@@ -32,7 +32,7 @@ def tri_downloads():
                 #verification : file doesn't exist in the folder
                 move(d_path + file, path)  
             else:
-                move(d_path + file, '/home/hector/Fichiers_existants')  
+                move(d_path + file, '/home/{user}/Fichiers_existants')  
 
 
 tri_downloads()
